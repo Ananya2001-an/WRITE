@@ -1,8 +1,16 @@
 const express = require('express')
 const router = express.Router()
+const Assign = require('../models/assignments')
 
-router.get('/', (req, res)=>{
-    res.render('index')
+router.get('/', async(req, res)=>{
+    let assignments
+    try{
+        assignments = await Assign.find().sort({deadline: 1}).exec()
+    }catch{
+        assignments = []
+    }
+
+    res.render('index', {assignments: assignments})
 })
 
 module.exports = router

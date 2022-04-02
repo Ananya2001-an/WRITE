@@ -1,1 +1,15 @@
-Hello Everyone!
+<h1>Important Assignments ✏️</h1>
+<div>
+    <%  assignments.forEach(assignment => { %>
+        <% if(assignment.priority === true) { %>
+            <div>
+            <%= assignment.name %>
+            <%= assignment.deadline.toDateString() %>
+            <%= assignment.subject %>
+            </div>
+        <% } %>
+     <% }) %>
+     
+     
+</div>
+

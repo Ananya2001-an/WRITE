@@ -1,0 +1,15 @@
+<h2>Search Notes</h2>
+<form action="/notes" method="get">
+    <label>Name:</label>
+    <input type="text" name="name" value="<%= searchOptions.name %>">
+<button type="submit">Search</button>
+<div><% notes.forEach(note => { %>
+    <%= note.name %>
+    
+    <a href="/">View</a>
+    <a href="/">Edit</a>
+    <a href="/">Delete</a>
+    <br>
+<% }) %>
+</div>
+</form>

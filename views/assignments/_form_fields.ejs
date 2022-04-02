@@ -1,0 +1,13 @@
+<label>Name:</label>
+<input type="text" name="name" value="<%= assignment.name %>">
+<label>Deadline:</label>
+<input type="date" name="deadline" value="<%= assignment.deadline %>">
+<label>Subject:</label>
+<input type="text" name="subject" value="<%= assignment.subject %>">
+<label>Priority:</label>
+<select name="priority">
+    <option value="true">Imp</option>
+    <option value="false">Not Imp</option>
+</select>
+<label>Attach PDF:</label>
+<input type="file" name="assignpdf" class="filepond">
