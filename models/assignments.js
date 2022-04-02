@@ -25,11 +25,21 @@ const assignSchema = new mongoose.Schema({
       type: Buffer,
       required: true
     },
+    assignpdfType:{
+        type: String,
+        required: true
+    },
 
     createdAt:{
         type: Date,
         required: true,
         default: Date.now
+    }
+})
+
+assignSchema.virtual('assignpdfPath').get(function(){
+    if (this.assignpdf != null){
+        return `data:${this.assignpdfType};charset=utf-8;base64,${this.assignpdf.toString('base64')}`
     }
 })
 

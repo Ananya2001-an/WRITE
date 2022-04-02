@@ -6,11 +6,10 @@
 <div><% assignments.forEach(assign => { %>
     <%= assign.name %>
     <%= assign.deadline.toDateString() %>
-    
-    <a href="/">View</a>
-    <a href="/">Edit</a>
-    <a href="/">Delete</a>
-    <br>
+    <a href="/assignments/<%= assign.id %>">View</a>
+    <a href="/assignments/<%= assign.id %>/edit">Edit</a>
+    <%- include('../partials/deleteForm', {url: `/assignments/${assign.id}`}) %>
+
 <% }) %>
 </div>
 </form>

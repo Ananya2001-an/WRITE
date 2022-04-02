@@ -5,11 +5,10 @@
 <button type="submit">Search</button>
 <div><% notes.forEach(note => { %>
     <%= note.name %>
+    <a href="/notes/<%= note.id %>">View</a>
+    <a href="/notes/<%= note.id %>/edit">Edit</a>
+    <%- include('../partials/deleteForm', {url: `/notes/${note.id}`}) %>
     
-    <a href="/">View</a>
-    <a href="/">Edit</a>
-    <a href="/">Delete</a>
-    <br>
 <% }) %>
 </div>
 </form>

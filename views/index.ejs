@@ -6,6 +6,7 @@
             <%= assignment.name %>
             <%= assignment.deadline.toDateString() %>
             <%= assignment.subject %>
+            <a href="/assignments/<%= assignment.id %>"><h2>📑</h2></a>
             </div>
         <% } %>
      <% }) %>

@@ -1,0 +1,6 @@
+<h2>Edit Assignment</h2>
+<form action="/assignments/<%= assignment.id %>?_method=PUT" method="POST">
+    <%- include('_form_fields') %>
+    <a href="/assignments">Cancel</a>
+    <button type="submit">Update</button>
+</form>
