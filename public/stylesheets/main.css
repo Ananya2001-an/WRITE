@@ -1,7 +1,7 @@
 @import 'shared/header.css';
 @import 'shared/footer.css';
 @import 'shared/form.css';
-@import "shared/buttons.css";
+@import 'shared/buttons.css';
 
 body{
     margin: 0;
@@ -39,7 +39,7 @@ body{
  padding-left: 10px;
 }
 
-.assign-index-contents-data{
+.index-contents-data-other{
     display: grid;
     grid-template-columns: 900px 300px;
     grid-template-rows: auto;
@@ -53,7 +53,7 @@ body{
     padding-left: 10px;
 }
 
-.index-contents-data span, .assign-index-contents-data span {
+.index-contents-data span, .index-contents-data-other span {
     font-weight: bold;
 }
 
@@ -66,4 +66,21 @@ body{
 
 .index-contents-data a:hover{
     color: purple;
+}
+
+.errorMessage{
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.cover-image{
+    max-width: 100%; max-height: 300px; overflow: hidden;
+}
+.cover-image img{
+    max-width: initial;
+    margin: -250px 0 0 0px;
 }

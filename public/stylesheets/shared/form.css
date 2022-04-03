@@ -24,7 +24,7 @@
     margin-left: .25rem;
 } 
 
-.form-item input{
+.form-item input, .form-item select, .form-item textarea{
     height: 2rem;
     padding: .25rem .5rem;
     border-radius: .25rem;
@@ -36,7 +36,7 @@
     font-weight: bold;
 }
 
-.form-item input:focus
+.form-item input:focus, .form-item select:focus, .form-item textarea:focus
 {
     border-color:white;
     
@@ -44,4 +44,31 @@
 
 .form-row-end{
     justify-content: flex-end;
+}
+.form-item textarea{
+    height: 100%;
+    resize: none;
+}
+
+.form-item select option{
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.filepond--root{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.filepond--panel-root{
+    background-color: rgb(225, 101, 225);
+    border: 2px solid;
+    border-color: black;
+}
+
+.filepond--drop-label{
+    color: white;
+    font-size: inherit;
+
 }

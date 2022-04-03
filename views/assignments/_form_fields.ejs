@@ -1,13 +1,30 @@
-<label>Name:</label>
-<input type="text" name="name" value="<%= assignment.name %>">
-<label>Deadline:</label>
-<input type="date" name="deadline" value="<%= assignment.deadline %>">
-<label>Subject:</label>
-<input type="text" name="subject" value="<%= assignment.subject %>">
-<label>Priority:</label>
-<select name="priority">
-    <option value="true">Imp</option>
-    <option value="false">Not Imp</option>
-</select>
-<label>Attach PDF:</label>
-<input type="file" name="assignpdf" class="filepond">
+<div class="form-row">
+    <div class="form-item">
+        <label>Name:</label>
+        <input type="text" name="name" value="<%= assignment.name %>">
+    </div>
+    <div class="form-item">
+        <label>Deadline:</label>
+        <input type="date" name="deadline" value="<%= assignment.deadline %>">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label>Subject:</label>
+        <input type="text" name="subject" value="<%= assignment.subject %>">
+    </div>
+    <div class="form-item">
+        <label>Priority:</label>
+        <select name="priority">
+            <option value="true">Important</option>
+            <option value="false">Not Important</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-item">
+        <label>Attach PDF: (max limit: 1230 KB)</label>
+        <input type="file" name="assignpdf" class="filepond">
+    </div>
+</div>

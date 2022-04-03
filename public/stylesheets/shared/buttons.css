@@ -16,6 +16,18 @@
     background-color: rgb(225, 101, 225);
 }
 
+.btn-primary:hover{
+    background-color: rgb(221, 51, 221);
+}
+
+.btn-danger{
+    color: black;
+    background-color: rgb(225, 67, 67);
+}
+.btn-danger:hover{
+    background-color: rgb(218, 47, 47);
+}
+
 .btn-row{
     display: flex;
     justify-content: flex-end;

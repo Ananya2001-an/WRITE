@@ -1,6 +1,12 @@
-<h2>New Note</h2>
+<div class="container">
+<h2 class="page-header">New Note</h2>
+<div class="inner-container">
 <form action="/notes" method="POST">
     <%- include('_form_fields') %>
-    <a href="/notes">Cancel</a>
-    <button type="submit">Create</button>
+    <div class="btn-row">
+        <a class="btn btn-danger" href="/notes">Cancel</a>
+        <button class="btn btn-primary" type="submit">Create</button>
+    </div>
 </form>
+</div>
+</div>

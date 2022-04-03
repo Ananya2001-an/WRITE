@@ -1,6 +1,12 @@
-<h2>Edit Assignment</h2>
+<div class="container">
+<h2 class="page-header">Edit Assignment</h2>
+<div class="inner-container">
 <form action="/assignments/<%= assignment.id %>?_method=PUT" method="POST">
     <%- include('_form_fields') %>
-    <a href="/assignments">Cancel</a>
-    <button type="submit">Update</button>
+    <div class="btn-row">
+        <a class="btn btn-danger" href="/assignments">Cancel</a>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
 </form>
+</div>
+</div>

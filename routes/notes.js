@@ -66,7 +66,7 @@ router.put('/:id', async(req, res)=>{
     }
         
     await note.save()
-    res.redirect(`notes/${note.id}`)
+    res.redirect(`/notes/${note.id}`)
     
     }catch{
         if(note == null)

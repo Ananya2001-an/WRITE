@@ -70,7 +70,7 @@ router.put('/:id', async(req, res)=>{
     }
     
     await assignment.save()
-    res.redirect(`assignments/${assignment.id}`)
+    res.redirect(`/assignments/${assignment.id}`)
     }
     catch{
         if(assignment == null)
