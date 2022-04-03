@@ -1,16 +1,17 @@
-<h1>Important Assignments ✏️</h1>
-<div>
+<div class="container">
+<h1 class="page-header">Important Assignments ✏️</h1>
+<div class="inner-container">
     <%  assignments.forEach(assignment => { %>
         <% if(assignment.priority === true) { %>
-            <div>
-            <%= assignment.name %>
-            <%= assignment.deadline.toDateString() %>
-            <%= assignment.subject %>
-            <a href="/assignments/<%= assignment.id %>"><h2>📑</h2></a>
+            <div class="index-contents-data">
+            <p><span>Name: </span>  <%= assignment.name %></p> 
+            <p><span>Subject: </span>  <%= assignment.subject %></p> 
+            <p><span>Deadline: </span>  <%= assignment.deadline.toDateString() %></p> 
+            <a href="/assignments/<%= assignment.id %>">view 📑</a>
             </div>
         <% } %>
      <% }) %>
      
      
 </div>
-
+</div>

@@ -1,15 +1,31 @@
-<h2>Search Assignments</h2>
+<div class="container">
+<h2 class="page-header">Search Assignments</h2>
+<div class="inner-container">
 <form action="/assignments" method="get">
-    <label>Name:</label>
-    <input type="text" name="name" value="<%= searchOptions.name %>">
-<button type="submit">Search</button>
-<div><% assignments.forEach(assign => { %>
-    <%= assign.name %>
-    <%= assign.deadline.toDateString() %>
-    <a href="/assignments/<%= assign.id %>">View</a>
-    <a href="/assignments/<%= assign.id %>/edit">Edit</a>
-    <%- include('../partials/deleteForm', {url: `/assignments/${assign.id}`}) %>
-
+    <div class="form-row">
+        <div class="form-item">
+            <label>Name:</label>
+            <input type="text" name="name" value="<%= searchOptions.name %>">
+        </div>
+    </div>
+        <div class="form-row form-row-end">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+        
+  
+   
+<% assignments.forEach(assign => { %>
+    <div class="assign-index-contents-data">
+        <p><span>Name: </span> <%= assign.name %></p> 
+        <p><span>Deadline: </span> <%= assign.deadline.toDateString() %></p> 
+    </div>
+    <div class="btn-row">
+        <a class="btn btn-primary" href="/assignments/<%= assign.id %>">View</a>
+        <a class="btn btn-primary" href="/assignments/<%= assign.id %>/edit">Edit</a>
+        <%- include('../partials/deleteForm', {url: `/assignments/${assign.id}`}) %>
+    </div>
 <% }) %>
-</div>
+
 </form>
+</div>
+</div>

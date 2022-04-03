@@ -4,7 +4,7 @@ const Assign = require('../models/assignments')
 
 router.get('/', async(req, res)=>{
     let searchOptions = {}
-    if(req.query.name !=null && req.query.name != '')
+    if(req.query.name !=null && req.query.name !== '')
     {
         searchOptions.name = new RegExp(req.query.name, 'i')
     }
@@ -24,6 +24,28 @@ router.get('/new', (req, res)=>{
     res.render('assignments/new', {assignment: new Assign()})
 })
 
+router.post('/', async(req, res)=>{
+    const assignment = new Assign({
+        name: req.body.name,
+        deadline: new Date(req.body.deadline),
+        subject: req.body.subject,
+        priority: req.body.priority
+    })
+
+    if(req.body.assignpdf != null && req.body.assignpdf != '')
+    {
+        savepdf(assignment, req.body.assignpdf)
+    }
+
+    try{
+       const newassign = await assignment.save()
+       res.redirect(`assignments/${newassign.id}`)
+    }catch{
+        renderNewPage(res, assignment, true)
+    }
+})
+
+
 router.get('/:id', async(req, res)=>{
     const assignment = await Assign.findById(req.params.id)
     res.render('assignments/show', {assignment: assignment})
@@ -42,19 +64,19 @@ router.put('/:id', async(req, res)=>{
     assignment.deadline = new Date(req.body.deadline)
     assignment.subject = req.body.subject
     assignment.priority = req.body.priority
+    if(req.body.assignpdf != null && req.body.assignpdf != '')
+    {
+        savepdf(assignment, req.body.assignpdf)
+    }
     
-    savepdf(assignment, req.body.assignpdf)
     await assignment.save()
-    res.render('assignments/show',{assignment: assignment})
+    res.redirect(`assignments/${assignment.id}`)
     }
     catch{
         if(assignment == null)
-        res.redirect('/')
+        {res.redirect('/')} 
         else{
-            res.render('assignments/edit', {
-                assignment: assignment,
-                errorMessage: 'Error updating assignment!'
-            })
+            renderEditPage(res, assignment, true)
         }
        
     }
@@ -70,33 +92,44 @@ router.delete('/:id', async(req, res)=>{
         if(assignment == null)
         {res.redirect('/')}
         else{
-            res.redirect(`/assignments/${assignment.id}`)
+            res.render('assignments/show',{
+                assignment: assignment,
+                errorMessage: 'Could not remove assignment!'
+            })
         }
 
     }
 })
 
-router.post('/', async(req, res)=>{
-    const assignment = new Assign({
-        name: req.body.name,
-        deadline: new Date(req.body.deadline),
-        subject: req.body.subject,
-        priority: req.body.priority
-    })
-
-    savepdf(assignment, req.body.assignpdf)
-
-    try{
-       const newassign = await assignment.save()
-       res.redirect('/assignments')
-    }catch(err){
-        console.log(err)
-        res.render('assignments/new',{
-            assignment: assignment,
-            errorMessage: 'Error creating assignment!' 
-        } )
+async function renderNewPage(res, assignment, hasError = false) {
+    renderFormPage(res, assignment, 'new', hasError)
+  }
+  
+async function renderEditPage(res, assignment, hasError = false) {
+    renderFormPage(res, assignment, 'edit', hasError)
+  }
+  
+async function renderFormPage(res, assignment, form, hasError = false) {
+    try {
+      const params = {
+        assignment: assignment
+      }
+      if(hasError)
+      {
+        if(form === 'edit')
+        {
+          params.errorMessage = 'Error Updating assignment'
+        }else{
+          params.errorMessage = 'Error Creating assignment'
+        }
+      }
+      res.render(`assignments/${form}`, params)
+  
+    } catch {
+      res.redirect('/assignments')
     }
-})
+  }
+
 
 function savepdf(assignment, pdfencoded)
 {
