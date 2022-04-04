@@ -1,0 +1,6 @@
+:root{
+    --color-base-hue: rgb(225, 101, 225);
+    --color-base-hue-dark:rgb(221, 51, 221);
+    --color-base-hue-danger: rgb(225, 67, 67);
+    --color-base-hue-danger-dark:rgb(218, 47, 47);
+}

@@ -12,20 +12,20 @@
 }
 
 .btn-primary{
-    color: black;
-    background-color: rgb(225, 101, 225);
+    color: white;
+    background-color: var(--color-base-hue);
 }
 
 .btn-primary:hover{
-    background-color: rgb(221, 51, 221);
+    background-color: var(--color-base-hue-dark);
 }
 
 .btn-danger{
-    color: black;
-    background-color: rgb(225, 67, 67);
+    color: white;
+    background-color: var(--color-base-hue-danger);
 }
 .btn-danger:hover{
-    background-color: rgb(218, 47, 47);
+    background-color:var(--color-base-hue-danger-dark) ;
 }
 
 .btn-row{

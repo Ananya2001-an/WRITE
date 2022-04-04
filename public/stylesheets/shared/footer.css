@@ -15,5 +15,5 @@
 }
 
 .social a:hover{
-    color: rgb(225, 101, 225);
+    color: var(--color-base-hue);
 }

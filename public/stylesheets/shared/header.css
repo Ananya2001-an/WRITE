@@ -15,7 +15,7 @@
 
 }
 .header-title:hover{
-    color: rgb(225, 101, 225);
+    color: var(--color-base-hue);
 }
 
 .header-nav ul{
@@ -36,7 +36,7 @@
     font-weight: lighter;
 }
 .header-nav li a:hover{
-    color: rgb(225, 101, 225);
+    color: var(--color-base-hue);
 }
 .header{
     background: black
