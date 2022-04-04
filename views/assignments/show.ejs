@@ -6,7 +6,7 @@
         <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 25px;"><span style="font-weight: bold;">Deadline: </span> <%= assignment.deadline.toDateString() %></p>
         <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 25px;"><span style="font-weight: bold;">Subject: </span> <%= assignment.subject %></p>
         <% if(assignment.priority === true) { %>
-        <p style="font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: red;font-size: large;font-style: italic;">**Important</p>
+        <p style="font-weight: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: var(--color-base-hue-danger);font-size: large;font-style: italic;">**Important</p>
         <%  } %>
     <div class="btn-row">
         <a class="btn btn-primary" href="/assignments/<%= assignment.id %>/edit">Edit</a>
