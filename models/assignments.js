@@ -23,11 +23,11 @@ const assignSchema = new mongoose.Schema({
 
     assignpdf:{
       type: Buffer,
-      required: false
+      required: true
     },
     assignpdfType:{
         type: String,
-        required: false
+        required: true
     },
 
     createdAt:{
