@@ -14,6 +14,9 @@ Main frameworks that I used for the Backend were : **Node.js, express, MongoDB, 
 
 For Frontend I simply made use of **HTML**, **CSS**, **JavaScript** and a little bit of **Bootstrap**!
 
+The app is deployed on heroku, you can click on the link given to view app.
+https://write-web-dev.herokuapp.com/
+
 Below are a few stills from the app;
 
 1️⃣
