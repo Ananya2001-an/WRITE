@@ -13,16 +13,14 @@
     </div>
 
 </form>
-    <% notes.forEach(note => { %>
-        <div class="index-contents-data-other">
-            <p><span>Name: </span> <%= note.name %></p>
-        </div>
-        <div class="btn-row">
-            <a class="btn btn-primary" href="/notes/<%= note.id %>">View</a>
-            <a class="btn btn-primary" href="/notes/<%= note.id %>/edit">Edit</a>
-            <%- include('../partials/deleteForm', {url: `/notes/${note.id}`}) %>
-        </div>
-        
+
+<br>
+<br>
+
+<% notes.forEach(note => { %>
+    <div class="index-contents-data-other">
+        <p><a href="/notes/<%= note.id %>"><%= note.name %></a></p>
+    </div>
 <% }) %>
 
 

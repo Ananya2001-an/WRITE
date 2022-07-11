@@ -17,28 +17,31 @@
 
 .form-item label{
     
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Mono',monospace;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: .25rem;
     margin-left: .25rem;
+    color: var(--font-color);
 } 
 
 .form-item input, .form-item select, .form-item textarea{
     height: 2rem;
     padding: .25rem .5rem;
     border-radius: .25rem;
-    border: 1px solid black;
+    border: 1px solid var(--header-border);
+    background: var(--bg);
     outline: none;
-    color: var(--color-base-hue);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--font-color);
+    font-family: 'Roboto Mono', monospace;
     font-size: 1rem;
     font-weight: bold;
 }
 
+
 .form-item input:focus, .form-item select:focus, .form-item textarea:focus
 {
-    border-color:var(--color-base-hue);
+    border-color:var(--hover);
     
 }
 
@@ -51,24 +54,23 @@
 }
 
 .form-item select option{
-    background-color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    font-family: 'Roboto Mono', monospace;
     font-size: 1rem;
     font-weight: bold;
 }
 .filepond--root{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Mono', monospace;
 
 }
 
 .filepond--panel-root{
-    background-color: white;
-    border: 1px solid;
-    border-color: black;
+    background-color: var(--bg);
+    border: 1px solid var(--header-border);
 }
 
 .filepond--drop-label{
-    color: var(--color-base-hue);
+    color: var(--font-color);
     font-size: inherit;
 
 }

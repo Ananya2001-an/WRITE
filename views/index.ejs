@@ -1,13 +1,12 @@
 <div class="container">
-<h1 class="page-header">Important Assignments ✏️</h1>
+<h1 class="page-header">Important Assignments <i class="fa fa-file"></i></h1>
 <div class="inner-container">
     <%  assignments.forEach(assignment => { %>
         <% if(assignment.priority === true) { %>
             <div class="index-contents-data">
-            <p><span>Name: </span>  <%= assignment.name %></p> 
+            <p><span>Name: </span> <a href="/assignments/<%= assignment.id %>"> <%= assignment.name %></a></p> 
             <p><span>Subject: </span>  <%= assignment.subject %></p> 
             <p><span>Deadline: </span>  <%= assignment.deadline.toDateString() %></p> 
-            <a href="/assignments/<%= assignment.id %>">view 📑</a>
             </div>
         <% } %>
      <% }) %>

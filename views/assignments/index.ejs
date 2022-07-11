@@ -15,15 +15,12 @@
 
 </form>  
    
+<br>
+<br>
+
 <% assignments.forEach(assign => { %>
     <div class="index-contents-data-other">
-        <p><span>Name: </span> <%= assign.name %></p> 
-        <p><span>Deadline: </span> <%= assign.deadline.toDateString() %></p> 
-    </div>
-    <div class="btn-row">
-        <a class="btn btn-primary" href="/assignments/<%= assign.id %>">View</a>
-        <a class="btn btn-primary" href="/assignments/<%= assign.id %>/edit">Edit</a>
-        <%- include('../partials/deleteForm', {url: `/assignments/${assign.id}`}) %>
+        <p><a href="/assignments/<%= assign.id %>"><%= assign.name %></a></p>
     </div>
 <% }) %>
 
