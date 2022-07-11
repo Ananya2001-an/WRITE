@@ -41,12 +41,19 @@ npm install
 Above code would install the default npm dependencies. You will have to install some more as mentioned below:
 
 -body-parser
+
 -mongoose
+
 -method-override
+
 -dotenv
+
 -ejs
+
 -express
+
 -express-ejs-layouts
+
 -filepond-plugin-pdf-preview
 
 If you are interested in contributing to this project then I will recommend you to install another dependency called nodemon which will refresh your server everytime you make any changes to the site. No need to call 'npm run start' again and again. You just have to run the command 'npm run devStart' where devStart is the script I have provided in package.json file for nodemon to start the server.
