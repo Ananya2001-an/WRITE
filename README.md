@@ -1,37 +1,61 @@
-#WRITE(●'◡'●)
+# WRITE
 
-Hey! If you like keeping track of your assignments and also love taking minimalistic notes, then you might like this application which I call as "WRITE". 
+## Modern note taking app 📝
+WRITE allows you to take notes and even keep track of your important assignments. Minimalistic nature and simple user interface will boost your productivity.
 
-WRITE enables you to add all necessary information about your assignments like deadlines, corresponding subject and also attach a PDF related to your assignment(describing the tasks i guess?). 
-Based on the priority of your assignments, in case they are important, you can easily see all the marked as important ones on your home page in increasing order of their deadlines (makes it easier to know which is nearly due!). 
+![2022-07-11 21_47_50-Greenshot](https://user-images.githubusercontent.com/55504616/178314551-b8c28b88-e386-47ee-a021-d5687a1e138a.png)
 
-Moreover, WRITE also provides the facility of adding notes. You can type anything in it with some title for your note and also add a nice cover image to it. 
-It just makes this app a bit more fun to use and enhances the aesthetic of your note view page. 
+### **Features of WRITE:**
 
-I am still going to add some more features to it in the future so that it becomes much more easier to use. 
+• Bootstrap framework: Provides robust, flexible, and intuitive website with Bootstrap 5. Easily customize your site with the source Css files.
 
-Main frameworks that I used for the Backend were : **Node.js, express, MongoDB, JavaScript**. 
+• Dark mode: Switch to a low-light UI with the click of a button. Change colors with variables to match your vibe.
 
-For Frontend I simply made use of **HTML**, **CSS**, **JavaScript** and a little bit of **Bootstrap**!
+• Full Text Search: Easily search your assignments and notes.
 
-The app is deployed on heroku, you can click on the link given to view app;
 
-https://write-web-dev.herokuapp.com/
+### **Requirements:**
 
-Below are a few stills from the app;
+• Git
 
-1️⃣
+• Node.js
 
-![app index](https://user-images.githubusercontent.com/55504616/161611549-c3732ca0-d9ea-40ff-b1ad-fbcff198d40f.png)
+Why Node.js?
 
-2️⃣
+WRITE uses npm (included with Node.js) to centralize dependency management, making it easy to update resources, build tooling, plugins, and build scripts.
 
-![new assign](https://user-images.githubusercontent.com/55504616/161611598-e2192a5d-fbc9-4ca3-b12a-7c8b6b525975.png)
+### **Get Started:**
 
-3️⃣
+1. Clone repository
 
-![new note](https://user-images.githubusercontent.com/55504616/161611699-f1f41f0f-a1e4-4aac-85f8-073f9ffc140a.png)
+```
+git clone https://github.com/Ananya2001-an/WRITE.git
+```
 
-4️⃣
+2. Install dependencies
 
-![view note](https://user-images.githubusercontent.com/55504616/161611767-bc1e8199-0d4d-4b8f-ac0d-0f8710c3f51e.png)
+```
+npm install
+```
+
+Above code would install the default npm dependencies. You will have to install some more as mentioned below:
+
+-body-parser
+-mongoose
+-method-override
+-dotenv
+
+If you are interested in contributing to this project then I will recommend you to install another dependency called nodemon which will refresh your server everytime you make any changes to the site. No need to call 'npm run start' again and again. You just have to run the command 'npm run devStart' where devStart is the script I have provided in package.json file for nodemon to start the server.
+
+3. Start development server
+
+```
+npm run start
+```
+
+You can see the site running on localhost **3000**.
+
+All data is stored in your local host itself. Every time you run the server the data gets retrieved from your local storage.
+
+## Enjoy writing with WRITE!❤
+
