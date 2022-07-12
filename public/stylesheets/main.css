@@ -76,12 +76,12 @@ body{
 }
 
 .errorMessage{
-    color: var(--color-base-hue-danger);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--font-color);
+    font-family: 'Roboto Mono', monospace;
     font-size: larger;
     margin-top: 20px;
     margin-left: 20px;
-    font-weight: bold;
+    font-style: italic;
 }
 
 .cover-image{
